@@ -1,0 +1,27 @@
+spring:
+  redis:
+    host: 192.168.147.131
+    port: 6379
+    database: 0
+    lettuce:
+      pool:
+        max-active: 32
+        max-aile: 16
+        min-idle: 8
+#用户登录配置参数
+login:
+  maxAttempts: 3   #最大登录尝试次数
+  lockDuration: 30 #锁定时长(分钟)
+  loginWindow: 3   # 登录窗口时间(分钟)
+
+#热搜服务相关参数
+hotSearch:
+  scoreToAdd: 10 # 每次增加分数 权重
+
+# 以用户为中心的查找车辆
+user.center:
+  radius: 500 # 单位m
+
+#以车辆为中心的半径查找用户
+car.center:
+  radius: 200 # 单位m
